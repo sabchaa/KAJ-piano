@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="noteHandler.js" defer></script>
+    <script src="recorder.js" defer></script>
+    <title>Piano</title>
+</head>
+<body>
+    <div class="panel">
+        <button class="record-btn button">Record</button>
+    </div>
+    <div class="octave">
+        <div data-note="C" class="white key"></div>
+        <div data-note="Db" class="black key"></div>
+        <div data-note="D" class="white key"></div>
+        <div data-note="Eb" class="black key"></div>
+        <div data-note="E" class="white key"></div>
+        <div data-note="F" class="white key"></div>
+        <div data-note="Gb" class="black key"></div>
+        <div data-note="G" class="white key"></div>
+        <div data-note="Ab" class="black key"></div>
+        <div data-note="A" class="white key"></div>
+        <div data-note="Bb" class="black key"></div>
+        <div data-note="B" class="white key"></div>
+    </div>
+
+    <audio id="C" src = "sounds/c3.mp3"></audio>
+    <audio id="Db" src = "sounds/c-3.mp3"></audio>
+    <audio id="D" src = "sounds/d3.mp3"></audio>
+    <audio id="Eb" src = "sounds/d-3.mp3"></audio>
+    <audio id="E" src = "sounds/e3.mp3"></audio>
+    <audio id="F" src = "sounds/f3.mp3"></audio>
+    <audio id="Gb" src = "sounds/f-3.mp3"></audio>
+    <audio id="G" src = "sounds/g3.mp3"></audio>
+    <audio id="Ab" src = "sounds/g-3.mp3"></audio>
+    <audio id="A" src = "sounds/a4.mp3"></audio>
+    <audio id="Bb" src = "sounds/a-4.mp3"></audio>
+    <audio id="B" src = "sounds/b4.mp3"></audio>
+
+    <audio id="recordedAudio"></audio>
+</body>
+</html>

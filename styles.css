@@ -1,0 +1,67 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.octave {
+    display: flex;
+}
+
+.white {
+    width: 90px;
+    height: 350px;
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 6px;
+}
+
+.black {
+    width: 50px;
+    height: 200px;
+    background-color: rgb(26, 26, 26);
+    border: 1px solid grey;
+    margin-left: -25px;
+    margin-right: -25px;
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.active {
+    background-color: rgb(222, 222, 222);
+}
+
+.panel {
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.button {
+    font-size: 2rem;
+    border-radius: 12px;
+    color: white;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.record-btn {
+    background-color: rgb(255, 72, 72);
+}
+
+.record-btn.active {
+    background-color: rgb(121, 121, 121)
+}
+
+.button:hover, .button:focus {
+    color: rgba(255, 255, 255, 0.689);
+}
+
