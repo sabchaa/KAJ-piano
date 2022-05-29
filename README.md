@@ -1,6 +1,12 @@
 # KAJ-piano
 
-Webová aplikace, která umožňuje hru na piano pomocí tlačítek klávesnice nebo myši. Aplikace umožňuje zapnout metronom, který pomůže uživateli udžet správné tempo. Hru na piano si může uživatel nahrát a poté stáhnout.
+Webová aplikace, která umožňuje hru na piano. Uživatel si může zapnout metronom, který pomůže uživateli udžet správné tempo. Hru na piano si může uživatel nahrát a poté stáhnout.
+
+Aplikace běží zde: https://sabchaa.github.io/KAJ-piano/
+
+## Hra na piano
+* pomocí kláves zobrazených na klávesách piana
+* levým tlačítkem myši
 
 ## Metronom
 #### Bpm (beats per minute)
@@ -15,7 +21,12 @@ Webová aplikace, která umožňuje hru na piano pomocí tlačítek klávesnice 
 * výsledná nahrávka je zobrazena vedle tlačítka record, nahrávka se automaticky přehraje
 * pro stažení nahrávky klikněte na tři tečky a tlačítko "Download"
 
-### Nepovinné kategorie
+## Využití Web Audio API
+* generování zvuku metronomu
+* využití audioContext.currentTime pro přesnost metronomu
+* nahrávání
+
+## Nepovinné kategorie
 |Položka         |Splněno?                       |
 |----------------|-------------------------------|
 |Validita |Funguje ve všech zmíněných prohlížečích, ale je nutno povolit přehrávání zvuků v nastavení prohlížeče |
