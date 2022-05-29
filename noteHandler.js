@@ -1,4 +1,4 @@
-const KEYS = ['z','s','x','d','c','v','g','b','h','n','j','m'];
+const KEYS = ['q', '2', 'w', '3', 'e', 'r', '5', 't', '6', 'y', '7', 'u', 'z','s','x','d','c','v','g','b','h','n','j','m',','];
 
 const notes = document.querySelectorAll('.key')
 
@@ -10,7 +10,6 @@ let playedNotes
 notes.forEach(key => {
     key.addEventListener('mousedown', e => {
         playNote(key)
-        console.log(e.type);
         key.classList.add('active');
     })
 

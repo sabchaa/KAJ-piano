@@ -9,10 +9,21 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .octave {
     display: flex;
+}
+
+.key {
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
 }
 
 .white {
@@ -21,6 +32,7 @@ body {
     background-color: white;
     border: 1px solid grey;
     border-radius: 6px;
+    line-height: 600px;
 }
 
 .black {
@@ -32,6 +44,8 @@ body {
     margin-right: -25px;
     z-index: 1;
     border-radius: 6px;
+    color: white;
+    line-height: 300px;
 }
 
 .active {
@@ -40,16 +54,15 @@ body {
 
 .panel {
     display: flex;
-    margin-bottom: 3rem;
+    margin-bottom: 20px;
 }
 
 .recording-container {
     margin-left: 100px;
-    border: 1px solid black;
 }
 
 .button {
-    font-size: 2rem;
+    font-size: 1.2rem;
     border-radius: 12px;
     color: white;
     border: none;
@@ -58,28 +71,43 @@ body {
     cursor: pointer;
 }
 
+@keyframes recording {
+    0% {
+      background-color: #ff2b2b;
+      box-shadow: 0 0 5px #ff0000;
+    }
+    50% {
+      background-color: #ff2b2b;
+      box-shadow: 0 0 20px #ff0000;
+    }
+    100% {
+      background-color: #ff2b2b;
+      box-shadow: 0 0 5px #ff0000;
+    }
+  }
+
 .record-btn {
     background-color: rgb(255, 72, 72);
-    margin-top: 160px;
+    border-radius: 50%;
+    margin-top: 100px;
+    width: 80px;
+    height: 80px;
 }
 
 .record-btn.active {
-    background-color: rgb(121, 121, 121)
+    animation: recording 1200ms infinite;
 }
-
-.button:hover, .button:focus {
-    color: rgba(255, 255, 255, 0.689);
-}
-
 
 .metronome {
-    width: 300px;
-    height: 200px;
-    font-family: Arial, Helvetica, sans-serif;
+    width: 340px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid black;
+    border: 2px solid gray;
+    border-radius: 12px;
+    padding: 20px 20px 20px 20px;
+    margin-top: 20px;
 }
 
 .bpm {
@@ -116,6 +144,11 @@ body {
     margin-top: 10px;
     font-size: 2rem;
     cursor: pointer;
+    transition: transform 500ms;
+}
+
+.metronome-trigger-btn:hover {
+    transform: scale(1.08);
 }
 
 .adjust {
@@ -132,7 +165,8 @@ body {
 
 .adjust svg:hover {
     border-radius: 50%;
-    background-color: rgb(166, 166, 166);
+    background-color: rgb(110, 75, 136);
+    transform: scale(1.2);
 }
 
 .beats-count-span {
@@ -145,11 +179,11 @@ body {
     color:rgb(110, 75, 136)
 }
 
-path.inc-dec {
+path {
     fill: rgb(110, 75, 136);
 }
 
-.adjust svg:hover path.inc-dec{
+.adjust svg:hover > path:nth-child(2){
     fill: rgb(255, 255, 255);
 }
 
@@ -165,7 +199,7 @@ path.inc-dec {
     transition: opacity .2s;
   }
 
-  .slider::-webkit-slider-thumb {
+.slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 20px;
@@ -173,4 +207,15 @@ path.inc-dec {
     border-radius: 50%; 
     background: rgb(138, 98, 168);
     cursor: pointer;
-  }
+}
+
+.note-img {
+    width: auto;
+    height: 100px;
+    -webkit-transform:rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+
+}

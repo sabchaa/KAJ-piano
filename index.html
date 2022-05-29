@@ -22,14 +22,14 @@
                 <div class="adjust tempo-dec">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path class="inc-dec" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
                       </svg>
                 </div>
                 <input class ="slider" type="range" min="20" max="180" value="120" step="1">
                 <div class="adjust tempo-inc">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path class="inc-dec" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                     </svg>
                 </div>
             </div>
@@ -40,14 +40,14 @@
                 <div class="adjust beats-dec">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path class="inc-dec" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                        <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
                       </svg>
                 </div>
                 <div class="beats-count">4</div>
                 <div class="adjust beats-inc">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
-                        <path class="inc-dec" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
                     </svg>
                 </div>
             </div>
@@ -57,20 +57,35 @@
         <div class="recording-container">
             <button class="record-btn button">Record</button>
         </div>
+        <audio controls id="recordedAudio" style= "margin-top: 115px; margin-left: 100px;"></audio>
     </div>
     <div class="octave">
-        <div data-note="C" class="white key"></div>
-        <div data-note="Db" class="black key"></div>
-        <div data-note="D" class="white key"></div>
-        <div data-note="Eb" class="black key"></div>
-        <div data-note="E" class="white key"></div>
-        <div data-note="F" class="white key"></div>
-        <div data-note="Gb" class="black key"></div>
-        <div data-note="G" class="white key"></div>
-        <div data-note="Ab" class="black key"></div>
-        <div data-note="A" class="white key"></div>
-        <div data-note="Bb" class="black key"></div>
-        <div data-note="B" class="white key"></div>
+        <div data-note="C" class="white key">q</div>
+        <div data-note="Db" class="black key">2</div>
+        <div data-note="D" class="white key">w</div>
+        <div data-note="Eb" class="black key">3</div>
+        <div data-note="E" class="white key">e</div>
+        <div data-note="F" class="white key">r</div>
+        <div data-note="Gb" class="black key">5</div>
+        <div data-note="G" class="white key">t</div>
+        <div data-note="Ab" class="black key">6</div>
+        <div data-note="A" class="white key">y</div>
+        <div data-note="Bb" class="black key">7</div>
+        <div data-note="B" class="white key">u</div>
+
+        <div data-note="C2" class="white key">z</div>
+        <div data-note="Db2" class="black key">s</div>
+        <div data-note="D2" class="white key">x</div>
+        <div data-note="Eb2" class="black key">d</div>
+        <div data-note="E2" class="white key">c</div>
+        <div data-note="F2" class="white key">v</div>
+        <div data-note="Gb2" class="black key">g</div>
+        <div data-note="G2" class="white key">b</div>
+        <div data-note="Ab2" class="black key">h</div>
+        <div data-note="A2" class="white key">n</div>
+        <div data-note="Bb2" class="black key">j</div>
+        <div data-note="B2" class="white key">m</div>
+        <div data-note="C3" class="white key">,</div>
     </div>
 
     <audio id="C" src = "sounds/c3.mp3"></audio>
@@ -86,6 +101,19 @@
     <audio id="Bb" src = "sounds/a-4.mp3"></audio>
     <audio id="B" src = "sounds/b4.mp3"></audio>
 
-    <audio id="recordedAudio"></audio>
+    <audio id="C2" src = "sounds/c4.mp3"></audio>
+    <audio id="Db2" src = "sounds/c-4.mp3"></audio>
+    <audio id="D2" src = "sounds/d4.mp3"></audio>
+    <audio id="Eb2" src = "sounds/d-4.mp3"></audio>
+    <audio id="E2" src = "sounds/e4.mp3"></audio>
+    <audio id="F2" src = "sounds/f4.mp3"></audio>
+    <audio id="Gb2" src = "sounds/f-4.mp3"></audio>
+    <audio id="G2" src = "sounds/g4.mp3"></audio>
+    <audio id="Ab2" src = "sounds/g-4.mp3"></audio>
+    <audio id="A2" src = "sounds/a5.mp3"></audio>
+    <audio id="Bb2" src = "sounds/a-5.mp3"></audio>
+    <audio id="B2" src = "sounds/b5.mp3"></audio>
+    <audio id="C3" src = "sounds/c5.mp3"></audio>
+
 </body>
 </html>
