@@ -5,19 +5,11 @@ let ac = new AudioContext();
 let dest = ac.createMediaStreamDestination();
 for (let i = 0; i < notes.length; i++) {
     const a = document.getElementsByTagName("audio")[i];
-    //console.log(a);
-    console.log("-------------------")
-    
     const source1 = ac.createMediaElementSource(a);
-    
-    // The media element source stops audio playout of the audio element.
-    // Hook it up to speakers again.
     source1.connect(ac.destination);
-    
-    // Hook up the audio element to a MediaStream.
     source1.connect(dest);
 }
-console.log(recorder);
+
 recorder = new MediaRecorder(dest.stream);
 
 async function startRecording() {
@@ -41,7 +33,6 @@ function isRecording() {
     }
 }
 
-
 function handleRecording() {
     recordBtn.classList.toggle('active');
 
@@ -52,8 +43,6 @@ function handleRecording() {
         stopRecording();
     }
 }
-
-
 
 function stopRecording() {
     recorder.stop();

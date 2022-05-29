@@ -7,11 +7,56 @@
     <link rel="stylesheet" href="styles.css">
     <script src="noteHandler.js" defer></script>
     <script src="recorder.js" defer></script>
+    <script src="metronome.js" defer></script>
     <title>Piano</title>
 </head>
 <body>
     <div class="panel">
-        <button class="record-btn button">Record</button>
+        <div class="metronome">
+            <div class="bpm">
+                <span class="tempo">120</span>
+                <span class="bpm">BPM</span>
+            </div>
+    
+            <div class="tempo-settings">
+                <div class="adjust tempo-dec">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path class="inc-dec" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                      </svg>
+                </div>
+                <input class ="slider" type="range" min="20" max="180" value="120" step="1">
+                <div class="adjust tempo-inc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path class="inc-dec" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                </div>
+            </div>
+    
+            <span class="beats-count-span">Beats count</span>
+    
+            <div class="time-signature">
+                <div class="adjust beats-dec">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path class="inc-dec" d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+                      </svg>
+                </div>
+                <div class="beats-count">4</div>
+                <div class="adjust beats-inc">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                        <path class="inc-dec" d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="metronome-trigger-btn">Start</div>
+        </div>
+        <div class="recording-container">
+            <button class="record-btn button">Record</button>
+        </div>
     </div>
     <div class="octave">
         <div data-note="C" class="white key"></div>
